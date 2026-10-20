@@ -1,0 +1,27 @@
+<body>
+    {% extends 'layouts.html' %}
+    {% block container %}
+        <h1>Distancias</h1>
+                <form action="/distancia" method="post">
+            <div class="mb-3">
+                <label for="n1" class="form-label">Numero 1:</label>
+                <input type="number" class="form-control" id="n1" name="n1">
+            </div>
+            <div class="mb-3">
+                <label for="n2" class="form-label">Numero 2:</label>
+                <input type="number" class="form-control" id="n2" name="n2">
+            </div>
+            <div class="mb-3">
+                <label for="n3" class="form-label">Numero 3:</label>
+                <input type="number" class="form-control" id="n3" name="n3">
+            </div>
+            <div class="mb-3">
+                <label for="n4" class="form-label">Numero 4:</label>
+                <input type="number" class="form-control" id="n4" name="n4">
+            </div>
+
+            <button type="submit" class="btn btn-primary">Calcular</button>
+            <h1>El resultado es {{ "%.2f"|format(resultado)}}</h1>
+        </form>
+    {%endblock%}
+</body>
